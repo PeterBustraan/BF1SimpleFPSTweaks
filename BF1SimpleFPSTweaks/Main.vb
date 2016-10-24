@@ -4,6 +4,8 @@
     Private Editor As Editor = New Editor()    'Instance of Editor Controll which makes the actual changes to user files 
     Public Shared primeWindow As Main
     Private Sub SetDefaults(send As Object, e As EventArgs) Handles MyBase.Load
+        'Defaults
+            currentPath = " "
         'Singleton stuff (makes it easier to get members from across the solution)
             primeWindow = Me
         'Defaults for user.CFG
