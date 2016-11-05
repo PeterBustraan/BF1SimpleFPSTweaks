@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = Simple Battle Feild 1 Fixes 0.1.3
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3AE94D79-4C2A-4035-9560-18081A38A08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

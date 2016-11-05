@@ -3,6 +3,7 @@
     Private paths As Pathing = New Pathing()   'Instance of Pathing Control for finding things like the game folder and it's subs 
     Private Editor As Editor = New Editor()    'Instance of Editor Controll which makes the actual changes to user files 
     Public Shared primeWindow As Main
+
     Private Sub SetDefaults(send As Object, e As EventArgs) Handles MyBase.Load
         'Defaults
             currentPath = " "
@@ -33,10 +34,19 @@
         curSavePath.Text = currentPath
     End Sub
 
+    Private Sub curSavePath_TextChanged(sender As Object, e As EventArgs) Handles curSavePath.TextChanged
+        currentPath = curSavePath.Text
+    End Sub
+
     Private Sub editCFG(sender As Object, e As EventArgs) Handles writeOut.Click
         If (currentPath.Length > 2) Then
             Editor.makeChanges(currentPath)
         End If
     End Sub
 
+    Private Sub removeCFG_Click(sender As Object, e As EventArgs) Handles removeCFG.Click
+        If (currentPath.Length > 2) Then
+            Editor.removeCFG(currentPath)
+        End If
+    End Sub
 End Class
